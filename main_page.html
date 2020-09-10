@@ -11,6 +11,7 @@
         header{
             width: 1024px;
             height: 320px;
+            margin: 0 auto;
         }
         #logo{
             display: flex;
@@ -28,20 +29,25 @@
             width: 1024px;
             height: 40px;
             border-bottom: 1px solid gray;
+            margin: 0 auto;
         }
         #menu ul{
+            padding: 0;
             display: flex;
             justify-content: space-around;
-            align-items: center;
         }
         #menu ul li{
-
             list-style: none;
+        }
+        #menu ul li a{
+            text-decoration: none;
+            color : #000000
         }
         #main{
             width: 1024px;
             height: 500px;
             display: flex;
+            margin: 0 auto;
         }
         #main_rule{
             padding-top: 20px;
@@ -49,25 +55,26 @@
             height: 20px;
             display: flex;
             justify-content: center;
+            margin: 0 auto;
         }
         .section{
             width: 50%;
+            display: flex;
+            justify-content: center;
         }
 
         .section img{
-            padding-left: 55px;
-            padding-top: 50px;
+            padding-top: 10px;
             width: 402px;
             height: 200px;
         }
 
         .section div{
-            width: 402px;
-            padding-left: 55px;
             padding-top: 50px;
+            width: 402px;
         }
         #footer{
-            width: 1024px;
+            width: 1440px;
             height: 80px;
             background: gray;
         }
@@ -81,25 +88,31 @@
         </div>
         <nav id="menu">
             <ul>
-                <li>menu1</li>
-                <li>menu2</li>
-                <li>menu3</li>
-                <li>menu4</li>
-                <li>menu5</li>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+                <li><a href="">menu3</a></li>
+                <li><a href="">menu4</a></li>
+                <li><a href="">menu5</a></li>
             </ul>
         </nav>
     </header>
     <div id="main_rule">기본적인 룰</div>
     <main id="main">
         <section class="section">
-            <img src="image/citizen.png" alt="crew">
-            <div>크루원은 각자 주어진 미션을 다 깨서 게임을 이기던가
-            임포스터 찾아서 이기던</div>
+            <div class="main_content">
+                <img src="image/citizen.png" alt="crew">
+                <div>크루원은 각자 주어진 미션을 다 깨서 게임을 이기던가
+                    임포스터 찾아서 이기던
+                </div>
+            </div>
         </section>
         <section class="section">
-            <img src="image/imposter.jpg" alt="impo">
-            <div>임포는 남은 임포스터의 수와 남은 시민의 수가 같으면 승리
-            크루원 죽이셈</div>
+            <div class="main_content">
+                <img src="image/imposter.jpg" alt="impo">
+                <div>임포는 남은 임포스터의 수와 남은 시민의 수가 같으면 승리
+                    크루원 죽이셈
+                </div>
+            </div>
         </section>
     </main>
     <footer id="footer">
