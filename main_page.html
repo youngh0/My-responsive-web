@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main page</title>
+    <style>
+        body{
+            margin: 0;
+            background: #bbd8d1;
+        }
+        header{
+            width: 1024px;
+            height: 320px;
+        }
+        #logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #logo img{
+            padding-top: 10px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        #menu{
+            padding-top: 10px;
+            width: 1024px;
+            height: 40px;
+            border-bottom: 1px solid gray;
+        }
+        #menu ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #menu ul li{
+
+            list-style: none;
+        }
+        #main{
+            width: 1024px;
+            height: 500px;
+            display: flex;
+        }
+        #main_rule{
+            padding-top: 20px;
+            width: 1024px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .section{
+            width: 50%;
+        }
+
+        .section img{
+            padding-left: 55px;
+            padding-top: 50px;
+            width: 402px;
+            height: 200px;
+        }
+
+        .section div{
+            width: 402px;
+            padding-left: 55px;
+            padding-top: 50px;
+        }
+        #footer{
+            width: 1024px;
+            height: 80px;
+            background: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="image/among.jpg" alt="">
+        </div>
+        <nav id="menu">
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main_rule">기본적인 룰</div>
+    <main id="main">
+        <section class="section">
+            <img src="image/citizen.png" alt="crew">
+            <div>크루원은 각자 주어진 미션을 다 깨서 게임을 이기던가
+            임포스터 찾아서 이기던</div>
+        </section>
+        <section class="section">
+            <img src="image/imposter.jpg" alt="impo">
+            <div>임포는 남은 임포스터의 수와 남은 시민의 수가 같으면 승리
+            크루원 죽이셈</div>
+        </section>
+    </main>
+    <footer id="footer">
+
+    </footer>
+</body>
+</html>
