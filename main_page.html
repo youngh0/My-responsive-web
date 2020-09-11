@@ -3,154 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>main page</title>
-
-    <style>
-        body{
-            margin: 0;
-            background: #bbd8d1;
-        }
-        header{
-            width: 1024px;
-            height: 320px;
-            margin: 0 auto;
-        }
-        #logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #logo img{
-            padding-top: 10px;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-        }
-        #menu{
-            padding-top: 10px;
-            width: 1024px;
-            height: 40px;
-            border-bottom: 1px solid gray;
-            margin: 0 auto;
-        }
-        #menu ul{
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        #menu ul li{
-            font-weight: bold;
-            font-size: 16px;
-            list-style: none;
-        }
-        #menu ul li a{
-            text-decoration: none;
-            color : #000000
-        }
-        #menu ul li a:hover{
-            color: #374033;
-        }
-
-        #main{
-            width: 1024px;
-            height: 500px;
-            display: flex;
-            margin: 0 auto;
-        }
-        #main_rule{
-            font-weight: bold;
-            font-size: 20px;
-            padding-top: 20px;
-            width: 1024px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-        }
-        .section{
-            width: 50%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .section .main_content{
-            margin: 0;
-            width: 402px;
-            font-family: Rochester;
-            font-size: 20px;
-            color: #374033;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .section .main_content .img{
-            width: 100%;
-            height: 400px;
-            border-radius: 8px;
-        }
-
-        .section .main_content .text{
-            position: relative;
-            bottom: 220px;
-            color: white;
-            visibility: hidden;
-        }
-
-        .section .main_content .img:hover {
-            transition: opacity 1s;
-            opacity: 0.3;
-        }
-
-        .section .main_content:hover .text{
-            transition: visibility 2s;
-            color: white;
-            visibility: visible;
-        }
-
-        .section .main_content .text{
-            width: 350px;
-        }
-
-        #footer{
-            width: 1440px;
-            height: 80px;
-            background: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <img src="image/among.jpg" alt="">
-        </div>
-        <nav id="menu">
+    <header class="head">
+        <img src="image/among.jpg" alt="" id="logo">
+        <nav class="menu">
             <ul>
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu2</a></li>
-                <li><a href="">menu3</a></li>
-                <li><a href="">menu4</a></li>
-                <li><a href="">menu5</a></li>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
             </ul>
         </nav>
     </header>
-    <div id="main_rule">기본적인 룰</div>
-    <main id="main">
-        <section class="section">
-            <div class="main_content" id="ma1">
-                <img class="img" src="image/citizen.png" alt="crew">
-                <div class="text">미션을 모두 깨거나 임포스터를 다 찾으면 승리!</div>
-            </div>
+    <main class="main">
+        <section class="rule">
+
         </section>
-        <section class="section">
-            <div class="main_content" id="ma2">
-                <img  class="img" src="image/imposter.jpg" alt="impo">
-                <div class="text">크루원의 미션을 방해하면서 크루원을 죽이면 승리!</div>
+        <section class="explain">
+            <div class="container">
+                <img class="image"  src="image/citizen.png" alt="">
+                <div class="middle">
+                    <div class="text">임포스터를 피해 미션을 완료하거나
+                        모든 임포스터를 찾아내면 승리!</div>
+                </div>
+            </div>
+            <div class="container">
+                <img class="image" src="image/imposter.jpg" alt="">
+                <div class="middle">
+                    <div class="text">크루원들이 미션을 못하게 방해하면서
+                        크루원들을 죽이면 승리!</div>
+                </div>
             </div>
         </section>
     </main>
-    <footer id="footer">
-        내가만들었어~
+    <footer>
+
     </footer>
 </body>
 </html>
