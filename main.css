@@ -37,6 +37,10 @@ header{
     position: relative;
     top: 8px;
 }
+.head .menu ul li a{
+    text-decoration: none;
+    color: gray;
+}
 .main{
     width: 1024px;
     margin: 0 auto;
