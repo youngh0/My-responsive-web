@@ -49,41 +49,55 @@ header{
     grid-template-columns: 100%
 }
 .rule{background: green}
-.explain{
+.main .explain{
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 400px;
 }
-.explain .container .image{
+.main .explain .show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .explain .show .info{
+    position: relative;
     width: 380px;
     height: 380px;
-    position: relative;
-    left: 65px;
-    top: 5px;
+    overflow: hidden;
+}
+.main .explain .show .info img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
+    transition: 0.5s;
 }
-.explain .container .middle{
-    margin: 0;
+.main .explain .show .info .text {
+    width: 380px;
+    height: 100%;
+    border-radius: 10px;
     color: white;
-    width: 300px;
-    height: 50px;
-    position: relative;
-    top: -50%;
-    left: 50%;
-    transition: .5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     text-align: center;
+    line-height: 70px; /*글자높이*/
+    font-size: 20px;
+    position: absolute;
+    top: 100%;
+    bottom: -100%;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+    opacity: 1;
+    transition: 1s;
 }
-.container:hover .image{
+.main .explain .show .info .text #txt1{
+    height: 20px;
+}
+.main .explain .show .info:hover img{
     opacity: 0.3;
 }
-.container:hover .middle{
-    opacity: 1;
+.main .explain .show .info:hover .text{
+    top: 0; bottom: 0;
+    opacity: 0.7;
 }
 
 footer{
