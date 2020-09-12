@@ -33,13 +33,19 @@ header{
 }
 
 .head .menu ul li{
+    border-radius: 8px;
     list-style: none;
     position: relative;
     top: 8px;
 }
 .head .menu ul li a{
     text-decoration: none;
-    color: gray;
+    color: #3E0F0F;
+    transition: 0.5s;
+}
+.head .menu ul li:hover a{
+    text-shadow: 0 0 30px rgba(4,0,0,0.6);
+    color: #785454;
 }
 .main{
     width: 1024px;
@@ -48,7 +54,17 @@ header{
     grid-template-rows: 100px 400px;
     grid-template-columns: 100%
 }
-.rule{background: green}
+.main .rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .rule div h1{
+    text-align: center;
+}
+.main .rule div span{
+    font-weight: bold;
+}
 .main .explain{
     display: grid;
     grid-template-rows: 1fr;
@@ -87,11 +103,9 @@ header{
     left: 0;
     background: rgba(0, 0, 0, 1);
     opacity: 1;
-    transition: 1s;
+    transition: 0.8s;
 }
-.main .explain .show .info .text #txt1{
-    height: 20px;
-}
+
 .main .explain .show .info:hover img{
     opacity: 0.3;
 }
