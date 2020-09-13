@@ -5,7 +5,7 @@ body{
 }
 header{
     width: 1024px;
-    height: 320px;
+    height: 300px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -14,10 +14,10 @@ header{
 }
 
 .head #logo{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    padding-top: 10px;
+
 }
 .head .menu{
     width: 1024px;
@@ -51,7 +51,7 @@ header{
     width: 1024px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 100px 400px;
+    grid-template-rows: 80px 380px;
     grid-template-columns: 100%
 }
 .main .rule {
@@ -77,8 +77,8 @@ header{
 }
 .main .explain .show .info{
     position: relative;
-    width: 380px;
-    height: 380px;
+    width: 350px;
+    height: 350px;
     overflow: hidden;
 }
 .main .explain .show .info img{
@@ -89,7 +89,7 @@ header{
     transition: 0.5s;
 }
 .main .explain .show .info .text {
-    width: 380px;
+    width: 350px;
     height: 100%;
     border-radius: 10px;
     color: white;
