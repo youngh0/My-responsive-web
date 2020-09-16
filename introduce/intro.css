@@ -1,4 +1,7 @@
-body{margin: 0}
+body{
+    margin: 0;
+    background: #f4f4f4;
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -37,6 +40,10 @@ a{
     padding: 8px 12px;
     font-size: 16px;
     transition: 0.8s;
+
+}
+.menu li a{
+    font-family: 'Raleway','sans-serif';
 }
 .menu li:hover{
     background: #d49466;
@@ -56,31 +63,105 @@ a{
     font-size: 20px;
     display: none;
 }
-@media screen and (max-width: 768px){
-    .nav{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .menu{
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-    .menu li{
-        margin-top: 15px;
-    }
-    .nav .icon{
-        display: none;
-        width: 100%;
-        justify-content: center;
-    }
-    .nav_btn{
-        display: block;
-    }
-    .menu.active,.icon.active{
-        display: flex;
-    }
 
+.first{
+    text-align: center;
+}
+.click_btn:focus{
+    outline: none;
+}
+.btn{
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s;
+    border-radius: 7px;
+}
+.click_btn{
+    color: #fff;
+}
+.click_btn:hover{
+    color: #3498db;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+}
+.click_btn::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    height: 180%;
+}
+.click_btn:hover::before{
+    height: 0;
+}
+.info{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+.base{
 
 }
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.active #act_detail{
+    width: 200px;
+}
+
+.belong{
+}
+.belong img{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
+.sns{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.sns img{
+    width: 100px;
+    height: 100px;
+}
+
+/*@media screen and (max-width: 768px){*/
+/*    .nav{*/
+/*        flex-direction: column;*/
+/*        align-items: flex-start;*/
+/*    }*/
+/*    .menu{*/
+/*        width: 100%;*/
+/*        display: none;*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+/*    .menu li{*/
+/*        margin-top: 15px;*/
+/*    }*/
+/*    .nav .icon{*/
+/*        display: none;*/
+/*        width: 100%;*/
+/*        justify-content: center;*/
+/*    }*/
+/*    .nav_btn{*/
+/*        display: block;*/
+/*    }*/
+/*    .menu.active,.icon.active{*/
+/*        display: flex;*/
+/*    }*/
+/*}*/
+
