@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Title</title>
-    <script src="https://kit.fontawesome.com/852430f5ae.js"
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <script src="intro.js" defer></script>
     <link rel="stylesheet" href="intro.css">
 </head>
@@ -13,7 +12,7 @@
     <header>
         <nav class="nav">
             <div class="logo">
-                <img src="us.png" alt="">
+                <img src="../image/us.png" alt="">
                 <a href="">among-us</a>
             </div>
             <ul class="menu">
@@ -33,43 +32,54 @@
     </header>
     <main class="container">
         <section class="first">
-            <h1>infomation</h1>
+            <h1>MY INFORMATION</h1>
             <button class="btn click_btn">Click Me!</button>
         </section>
         <section class="info">
             <div class="base">
                 <div id="base_detail">
                     <h2>기본 정보</h2>
-                    <p class="detail_info">
-                        이름 : 차영호 <br>
-                        생년월일 : 1998.11.23 <br>
-                        사는 지역 : 충청남도 천안시 <br>
+                    <p class="detail_info" style="line-height: 50%">
+                        이름 : 차영호 <br><br><br>
+                        생년월일 : 1998.11.23 <br><br><br>
+                        사는 지역 : 충청남도 천안시 <br><br><br>
                     </p>
+                    <hr>
                 </div>
             </div>
-            <div class="active">
-                <div id="act_detail">
+            <div class="activity">
+                <div id="act_detail" >
                     <h2>현재 활동</h2>
-                    <p class="detail_info"><span>1.</span> reposive-web 포트폴리오</p>
-                    <p class="detail_info"><span>2.</span> 2학년 재학중/p>
+                    <p class="detail_info"style="line-height: 50%">
+                        1. reposive-web 포트폴리오 <br><br><br>
+                        2. 2학년 재학중
+                    </p>
                 </div>
+                <hr>
             </div>
             <div class="belong">
                 <div id="belong_detail">
-                    <h2>소속</h2>
-                    <p class="detail_info">
-                        학교 : 국민대학교 소프트웨어학부 <br>
-                        동아리 : WINK <br>
-                        출신 고등학교 : 천안오성고등학교
-                    </p>
+                    <h2 style="line-height: 50%">소속</h2 >
+                    <div class="belong_box">
+                        <p class="detail_info" style="line-height: 50%">
+                            학교 : 국민대학교 소프트웨어학부 <br> <br><br>
+                            동아리 : WINK <br><br><br>
+                            출신 고등학교 : 천안오성고등학교
+                        </p>
+                        <img src="kookmin_logo.png" alt="">
+                    </div>
+                    <hr>
                 </div>
-                <img src="us.png" alt="">
+
             </div>
             <div class="sns">
                 <div id="sns_detail">
                     <h2>SNS</h2>
+                    <div class="box">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
-
             </div>
         </section>
     </main>
