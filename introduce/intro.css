@@ -1,15 +1,18 @@
 body{
     margin: 0;
-    background: #f4f4f4;
+    background: #C1EBB2;
     width: 100%;
+}
+.container{
+    color: #242E17;
 }
 .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #bbd8d1;
+    background: #C9DCBB;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 .nav ul{
     padding: 0;
@@ -72,7 +75,7 @@ a{
     font-weight: bold;
     font-size: 25px;
     border: none;
-    background: #f4f4f4;
+    background: #C1EBB2;
     transition: 0.5s;
 }
 .click_btn:hover{
