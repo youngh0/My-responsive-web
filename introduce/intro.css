@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background: #f4f4f4;
+    width: 100%;
 }
 .nav{
     display: flex;
@@ -99,7 +100,7 @@ a{
     font-weight: bold;
     margin-top: 50px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .base,.activity,.belong,.sns{
@@ -245,3 +246,68 @@ br{
     }
 }
 
+@media (max-width: 375px){
+    .container h1{
+        font-size: 30px;
+    }
+    .container button{
+        font-size: 20px;
+    }
+    .belong .belong_box{
+        flex-direction: column;
+    }
+    .belong, .activity, .sns{
+        align-items: center;
+    }
+    .base_detail h2, .act_detail h2,
+    .belong_detail h2, .sns_detail h2{
+        font-size: 25px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .base{
+        position: relative;
+    }
+    .base_detail{
+        justify-content: center;
+    }
+    .base_detail .detail_info{
+        position: absolute;
+        left: 20%;
+    }
+    .base_detail hr{
+        position: absolute;
+        top:55%
+    }
+    .belong .detail_info, .base .detail_info{
+        margin-left: 0;
+    }
+    .belong_box{
+        align-items: center;
+    }
+    .base_detail p, .act_detail p,
+    .belong_detail p{
+        font-size: 15px;
+    }
+    .sns_detail .box{
+        margin-right: 0;
+    }
+    .box a{
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+        line-height: 45px;
+        margin-top: 15px;
+    }
+    .box #git{
+        margin-right: 0;
+    }
+    .belong img{
+        width: 150px;
+        height: 50px;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+}
