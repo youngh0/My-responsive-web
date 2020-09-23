@@ -60,6 +60,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+.main .rule div{
+    position: absolute;
+    top: 0;
 }
 .main .rule div h1{
     text-align: center;
@@ -124,6 +129,8 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 footer span {
