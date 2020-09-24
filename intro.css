@@ -1,21 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Gugi&family=Nanum+Gothic&family=Noto+Sans+KR&family=Sunflower:wght@300&display=swap');
+
 body{
     margin: 0;
-    background: #C1EBB2;
+    background: #CDC7B6;
     width: 100%;
 }
 .container{
     color: #242E17;
+    position: relative;
 }
+
 .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #C9DCBB;
+    background: #98958C;
     padding: 8px 12px;
     border-radius: 4px;
 }
 .nav ul{
     padding: 0;
+    margin-bottom: 0;
+}
+.nav ul li{
+    font-family: 'Baloo Tammudu 2', cursive;
 }
 a{
     text-decoration: none;
@@ -47,7 +55,7 @@ a{
 
 }
 .menu li a{
-    font-family: 'Raleway','sans-serif';
+    font-family: 'Gugi', cursive;
 }
 .menu li:hover{
     background: #d49466;
@@ -75,31 +83,39 @@ a{
     font-weight: bold;
     font-size: 25px;
     border: none;
-    background: #C1EBB2;
+    background: #CDC7B6;
     transition: 0.5s;
 }
 .click_btn:hover{
     transform: rotateY(360deg);
-}
-.click_btn:before{
-
 }
 
 .container{
     width: 1024px;
     margin: 0 auto;
 }
+.js-weather{
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 25px;
+    color: #FAFDF7;
+    font-family: 'Gugi', cursive;
+}
 
 .first{
+    font-family: 'Gugi', cursive;
     width: 100%;
     text-align: center;
 }
 .first h1{
     font-size: 50px;
     font-weight: bold;
+    margin-top: 30px;
 }
 .info{
-    font-family: "Nanum Gothic";
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     margin-top: 50px;
     display: grid;
@@ -243,7 +259,11 @@ br{
         width: 100%;
     }
     .container h1{
-        font-size: 40px;
+        font-size: 35px;
+    }
+    .js-weather{
+        left: 10px;
+        font-size: 18px;
     }
 }
 
@@ -257,7 +277,7 @@ br{
     .belong .belong_box{
         flex-direction: column;
     }
-    .belong, .activity, .sns{
+    .belong, .activity, .sns, .base{
         align-items: center;
     }
     .base_detail h2, .act_detail h2,
@@ -274,8 +294,7 @@ br{
         justify-content: center;
     }
     .base_detail .detail_info{
-        position: absolute;
-        left: 20%;
+        padding-left: 20%;
     }
     .base_detail hr{
         position: absolute;

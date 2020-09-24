@@ -6,6 +6,12 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <script src="intro.js" defer></script>
+    <script>
+        window.addEventListener("load",function (){
+           const response = fetch("http://api.openweathermap.org/data/2.5/weather?id=1835235&lang=kr&appid=8a9ec30a2155643a638723b6f7dc7abf");
+
+        });
+    </script>
     <link rel="stylesheet" href="intro.css">
 </head>
 <body>
@@ -31,6 +37,7 @@
         </nav>
     </header>
     <main class="container">
+        <div class="js-weather"></div>
         <section class="first">
             <h1>MY INFORMATION</h1>
             <button class="btn click_btn">Click Me!</button>
@@ -77,5 +84,6 @@
             </div>
         </section>
     </main>
+    <script src="weather.js"></script>
 </body>
 </html>
