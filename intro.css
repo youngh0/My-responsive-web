@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Gugi&family=Nanum+Gothic&family=Noto+Sans+KR&family=Sunflower:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Gugi&family=Nanum+Gothic&family=Noto+Sans+KR&family=Jua&family=Sunflower:wght@500&display=swap');
 
+
+.container{
+    color: #242E17;
+    position: relative;
+}
 body{
     margin: 0;
     background: #CDC7B6;
     width: 100%;
 }
-.container{
-    color: #242E17;
-    position: relative;
-}
-
 .nav{
     display: flex;
     justify-content: space-between;
@@ -101,7 +101,7 @@ a{
     font-weight: bold;
     font-size: 25px;
     color: #FAFDF7;
-    font-family: 'Gugi', cursive;
+    font-family: 'Sunflower', sans-serif;
 }
 
 .first{
@@ -115,7 +115,7 @@ a{
     margin-top: 30px;
 }
 .info{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Jua', sans-serif;
     font-weight: bold;
     margin-top: 50px;
     display: grid;
@@ -145,9 +145,9 @@ a{
     flex-direction: column;
 }
 .belong img{
-    width: 300px;
+    width: 350px;
     height: 100px;
-    margin-left: 50px;
+
 }
 .belong h2, .base h2, .activity h2, .sns h2{
     font-size: 30px;
@@ -195,6 +195,9 @@ a{
 }
 .box a:nth-child(2):before{
     background: #131418;
+}
+.box a:nth-child(3):before{
+    background: #e4405f;
 }
 
 .box a .fab{
@@ -264,6 +267,9 @@ br{
     .js-weather{
         left: 10px;
         font-size: 18px;
+    }
+    .belong img{
+        margin-left: 30px;
     }
 }
 
