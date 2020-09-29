@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="trouble.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="../intro.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">
+                <img src="../image/us.png" alt="">
+                <a href="">among-us</a>
+            </div>
+            <ul class="menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="sub-web-project/web-project.html">WEB PROJECT</a></li>
+                <li><a href="">APP PROJECT</a></li>
+                <li><a href="">TROUBLE SHOOTING</a></li>
+            </ul>
+            <ul class="icon">
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-github"></i></li>
+            </ul>
+            <a href="#" class="nav_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="main">
+            <table class="board">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                    </tr>
+                </thead>
+                <tbody class="content">
+
+                </tbody>
+            </table>
+            <a class="btn" href="#">등록하기</a>
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="../firebase_board.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Gugi&family=Nanum+Gothic&family=Noto+Sans+KR&family=Jua&family=Sunflower:wght@500&display=swap');
+
+body{
+    margin: 0;
+    background: #CDC7B6;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #98958C;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.nav ul{
+    padding: 0;
+    margin-bottom: 0;
+}
+.nav ul li{
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.logo,.menu{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.logo a{
+    font-size: 24px;
+    padding-left: 8px;
+}
+.menu,.icon{
+    list-style: none;
+}
+.menu li{
+    padding: 8px 12px;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+.menu li a{
+    font-family: 'Gugi', cursive;
+}
+.menu li:hover{
+    background: #d49466;
+    border-radius: 5px;
+}
+.icon li{
+    padding: 8px 12px;
+    font-size: 25px;
+}
+.icon{
+    display: flex;
+}
+.nav_btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 20px;
+    display: none;
+}
+
+.main{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.board{
+    margin-top: 40px;
+    border-collapse: collapse;
+}
+.board th{
+    border-bottom: 1px solid black;
+}
+.board td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #98958C;
+}
+.main a{
+    text-align: center;
+}
+thead tr th, .content tr td{
+    text-align: center;
+}
+.btn{
+    position: absolute;
+    bottom: -50%;
+    right: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li{
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .nav .icon{
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+    .nav_btn{
+        display: block;
+    }
+    .menu.active,.icon.active{
+        display: flex;
+    }
+    .container{
+        width: 100%;
+    }
+    .container h1{
+        font-size: 35px;
+    }
+    .js-weather{
+        left: 10px;
+        font-size: 18px;
+    }
+    .belong img{
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 375px){
+    .container h1{
+        font-size: 30px;
+    }
+    .container button{
+        font-size: 20px;
+    }
+    .belong .belong_box{
+        flex-direction: column;
+    }
+    .belong, .activity, .sns, .base{
+        align-items: center;
+    }
+    .base_detail h2, .act_detail h2,
+    .belong_detail h2, .sns_detail h2{
+        font-size: 25px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
