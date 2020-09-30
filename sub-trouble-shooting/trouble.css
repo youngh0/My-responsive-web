@@ -22,7 +22,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: #FAFDF7;
 }
 .logo,.menu{
     display: flex;
@@ -90,19 +90,31 @@ a{
     padding-bottom: 10px;
     border-bottom: 1px solid #98958C;
 }
+.main{
+    font-family: 'Jua', sans-serif;
+}
 .main a{
     text-align: center;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+.main thead{
+    font-size: 25px;
+}
+.main tbody{
+    font-size: 20px;
 }
 thead tr th, .content tr td{
     text-align: center;
 }
-.btn{
+.register_btn{
     position: absolute;
-    bottom: -50%;
+    bottom: -100%;
     right: 0;
-    border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
+    color: #FAFDF7;
+    background: #CAB47D;
 }
 
 @media (max-width: 768px) {

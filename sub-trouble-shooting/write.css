@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Gugi&family=Nanum+Gothic&family=Noto+Sans+KR&family=Jua&family=Sunflower:wght@500&display=swap');
+
+body{
+    margin: 0;
+    background: #CDC7B6;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-family: 'Sunflower', sans-serif;
+    font-size: 40px;
+}
+table{
+    margin: 0 auto;
+    position: relative;
+}
+.title input, .name input{
+    height: 40px;
+    font-size: 16px;
+}
+td, th{
+    padding: 10px;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+}
+.back{
+    position: absolute;
+    padding: 5px 20px;
+    color: #FAFDF7;
+    background: #CAB47D;
+    font-size: 23px;
+    text-decoration: none;
+    border-radius: 5px;right: 100px;
+}
+button{
+    position: absolute;
+    right: 13px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: #FAFDF7;
+    background: #CAB47D;
+    font-size: 23px;
+}
+button:focus{
+    outline: none;
+}

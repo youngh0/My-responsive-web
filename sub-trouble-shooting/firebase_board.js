@@ -39,6 +39,6 @@ const postRef = firebase.database().ref('/posts/').on('value', function (snapsho
     {
         const[key,body] = postData[i];
         tableContent.innerHTML += "<tr><td>" + today + "</td> <td>" +
-            "<a href='#'>" + body.title+"</a></td> <td>" + body.username + "</td></tr>"
+            "<a href='#'>" + body.title+"</a></td> <td>" + body.username + "</td><td>"+ "<a id='del'>x</a>" + "</td></tr>"
     }
 })
