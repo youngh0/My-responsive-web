@@ -13,7 +13,7 @@ const show_belong = document.querySelector('.belong');
 const show_activity = document.querySelector('.activity');
 const show_sns = document.querySelector('.sns');
 
-showBtn.addEventListener('click',() =>{
+showBtn.addEventListener('click',function (){
     show_base.classList.toggle('active');
     show_belong.classList.toggle('active');
     show_activity.classList.toggle('active');
