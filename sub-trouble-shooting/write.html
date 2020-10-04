@@ -13,26 +13,30 @@
         <section class="write">
             <table>
                 <tr class="title">
-                    <th><label for="">제목: </label></th>
-                    <td colspan="3"><input class="subject" type="text" placeholder="제목을 입력해주세요" size="40"></td>
+                    <th><label>제목: </label> </th>
+                    <td colspan="3"><input id="title" type="text" placeholder="제목을 입력해주세요" size="40">
+                    <button id="call" onclick="calling()">불러오기</button></td>
                 </tr>
                 <tr class="name">
-                    <th><label for="">이름: </label></th>
-                    <td colspan="3"><input class="author" type="text" placeholder="이름을 입력해주세요" size="40"></td>
+                    <th><label>이름: </label></th>
+                    <td colspan="3"><input id="name" type="text" placeholder="이름을 입력해주세요" size="40"></td>
                 </tr>
                 <tr>
-                    <th><label for="">내용: </label></th>
-                    <td colspan="3"><textarea name="" class="main_txt" cols="50" rows="15"></textarea></td>
+                    <th><label>내용: </label></th>
+                    <td colspan="3"><textarea name="" id="main_txt" cols="50" rows="15"></textarea></td>
                 </tr>
-                <tr>
-                    <td><a href="trouble.html" class="back">목록으로</a></td>
-                    <td><button class="r_btn" href="#">등록</button></td>
+                <tr id="button_menu">
+                    <td>
+                        <a href="trouble.html">목록으로</a>
+                        <a id="update_btn" href="#" onclick="update()">업데이트</a>
+                        <a id="r_btn" href="#" onclick="regist()">등록</a>
+                    </td>
                 </tr>
             </table>
         </section>
     </main>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
-    <script src="write.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
+    <script src="firebase_board.js"></script>
 </body>
 </html>

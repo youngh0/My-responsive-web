@@ -45,11 +45,29 @@
 
                 </tbody>
             </table>
-            <a class="register_btn" href="write.html">등록하기</a>
+            <article class="btn">
+                <a class="register_btn" href="write.html">등록하기</a>
+                <div class="func">
+                    <div class="title_search">
+                        제목: <input type="text" id="num" style="height: 30px; font-size: 20px">
+                    </div>
+                    <div class="three_btn">
+                        <button id="search" onclick="show()">show</button>
+                        <a href="write.html">update</a>
+                        <button id="delete" onclick="remove()">delete</button>
+                    </div>
+                </div>
+            </article>
+            <article class="main_script">
+                <div id="test">
+
+                </div>
+            </article>
         </section>
+
     </main>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
     <script src="write.js"></script>
 </body>
 </html>
