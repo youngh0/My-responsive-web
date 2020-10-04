@@ -9,31 +9,21 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-var nameV, titleV, main_txtV;
-
-function ready(){
-    nameV = document.getElementById('name').value;
-    titleV = document.getElementById('title').value;
-    main_txtV = document.getElementById('main_txt').value;
-}
-
-
 function regist(){
     let day = new Date();
     let today = day.getFullYear() + "/" + (day.getMonth()+1) + "/" + day.getDate();
-    ready();
 
-    firebase.database().ref('board/' + titleV).set({
-        username:nameV,
-        title:titleV,
-        main_txt:main_txtV,
+
+    firebase.database().ref('board/' + document.getElementById('title').value).set({
+        username:document.getElementById('name').value,
+        title:document.getElementById('title').value,
+        main_txt:document.getElementById('main_txt').value,
         today,
     })
     alert("ok");
 }
 
 function calling(){
-    console.log(firebase.database().ref('board/' + titleV))
     firebase.database().ref('board/' + document.getElementById('title').value).on('value',function (snapshot){
         document.getElementById('name').value = snapshot.val().username;
         document.getElementById('main_txt').value = snapshot.val().main_txt;
