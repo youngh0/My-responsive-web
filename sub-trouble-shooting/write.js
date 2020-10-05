@@ -1,16 +1,16 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyCdm4yhjEv2bGVp4d8d8SqtyWTpf7gwds0",
-    authDomain: "my-info-web.firebaseapp.com",
-    databaseURL: "https://my-info-web.firebaseio.com",
-    projectId: "my-info-web",
-    storageBucket: "my-info-web.appspot.com",
-    messagingSenderId: "451708761343",
-    appId: "1:451708761343:web:91d8d889069d3fee3cc8ca"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-var database = firebase.database();
+function signUp(){
+    let id = document.querySelector('#id').value;
+    let pw = document.querySelector('#pw').value;
+    console.log(id,pw);
+    firebase.auth().createUserWithEmailAndPassword(id,pw).then(cred =>{
+        console.log(cred);
+    });
+
+}
+
+function login(){
+
+}
 // 데티어 불러와서 보여주기
 function show(){
     firebase.database().ref('board').once('value', function (snapshot) {
@@ -21,15 +21,98 @@ function show(){
             const[key,body] = postData[i];
             if(document.getElementById('num').value === body.title){
                 test_box.innerHTML = "<h1>" + body.title + "</h1><div id='bo'>" + body.main_txt +"</div>";
+                console.log("ok")
+                return;
             }
+
         }
+        alert("x");
+
     });
 }
 
 function remove(){
-    console.log(firebase.database().ref('board/'+document.getElementById('num').value));
-    firebase.database().ref('board/'+document.getElementById('num').value).remove();
+    firebase.database().ref('board').once('value', function (snapshot) {
+        let test_box = document.querySelector("#test");
+        const postData = Object.entries(snapshot.val());
+        for(let i = 0; i < postData.length;i++)
+        {
+            const[key,body] = postData[i];
+            if(document.getElementById('num').value === body.title){
+                firebase.database().ref('board/'+document.getElementById('num').value).remove();
+                console.log("ok")
+                alert("삭제 완료");
+                return;
+            }
+        }
+        alert("x");
+
+    });
+
 }
+
+function regist(){
+    let day = new Date();
+    let today = day.getFullYear() + "/" + (day.getMonth()+1) + "/" + day.getDate();
+
+    firebase.database().ref('board').once('value', function (snapshot) {
+        const postData = Object.entries(snapshot.val());
+        console.log(postData.length);
+        for(let i = 0; i < postData.length;i++)
+        {
+            const[key,body] = postData[i];
+            console.log(body.title);
+            if(document.getElementById('title').value === body.title){
+                alert("이미 있어연");
+                document.getElementById('name').value = "";
+                document.getElementById('title').value = "";
+                document.getElementById('main_txt').value = "";
+                return ;
+            }
+        }
+        firebase.database().ref('board/' + document.getElementById('title').value).set({
+            username:document.getElementById('name').value,
+            title:document.getElementById('title').value,
+            main_txt:document.getElementById('main_txt').value,
+            today,
+        })
+        alert("ok");
+        location.href = "trouble.html";
+    });
+}
+
+function calling(){
+    firebase.database().ref('board').once('value', function (snapshot) {
+        let test_box = document.querySelector("#test");
+        const postData = Object.entries(snapshot.val());
+        for(let i = 0; i < postData.length;i++)
+        {
+            const[key,body] = postData[i];
+            if(document.getElementById('title').value === body.title){
+                document.getElementById('name').value = body.username;
+                document.getElementById('main_txt').value = body.main_txt;
+                console.log("ok")
+                alert("ㅇ");
+                return;
+            }
+        }
+        alert("x");
+
+    });
+
+}
+
+function update(){
+    firebase.database().ref('board/' + document.getElementById('title').value).update({
+        title:document.getElementById('title').value,
+        username:document.getElementById('name').value,
+        main_txt:document.getElementById('main_txt').value
+    });
+    alert("update");
+    location.href = "trouble.html";
+}
+
+
 
 firebase.database().ref('board').on('value', function (snapshot) {
     const postData = Object.entries(snapshot.val());

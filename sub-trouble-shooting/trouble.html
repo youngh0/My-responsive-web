@@ -9,65 +9,83 @@
     <script src="../intro.js" defer></script>
 </head>
 <body>
-<header>
-    <nav class="nav">
-        <div class="logo">
-            <img src="../image/us.png" alt="">
-            <a href="">among-us</a>
-        </div>
-        <ul class="menu">
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="sub-web-project/web-project.html">WEB PROJECT</a></li>
-            <li><a href="">APP PROJECT</a></li>
-            <li><a href="trouble.html">TROUBLE SHOOTING</a></li>
-        </ul>
-        <ul class="icon">
-            <li><i class="fab fa-facebook"></i></li>
-            <li><i class="fab fa-github"></i></li>
-        </ul>
-        <a href="#" class="nav_btn">
-            <i class="fas fa-bars"></i>
-        </a>
-    </nav>
-</header>
-<main class="container">
-    <section class="main">
-        <table class="board">
-            <thead>
-            <tr>
-                <th>날짜</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>삭제</th>
-            </tr>
-            </thead>
-            <tbody class="content">
-
-            </tbody>
-        </table>
-        <article class="btn">
-            <a class="register_btn" href="write.html">등록하기</a>
-            <div class="func">
-                <div class="title_search">
-                    제목: <input type="text" id="num" style="height: 30px; font-size: 20px">
-                </div>
-                <div class="three_btn">
-                    <a id="search" onclick="show()">show</a>
-                    <a href="write.html">update</a>
-                    <a id="delete" onclick="remove()">delete</a>
-                </div>
+    <header>
+        <nav class="nav">
+            <div class="logo">
+                <img src="../image/us.png" alt="">
+                <a href="">among-us</a>
             </div>
-        </article>
-        <article class="main_script">
-            <div id="test">
+            <ul class="menu">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="sub-web-project/web-project.html">WEB PROJECT</a></li>
+                <li><a href="#">APP PROJECT</a></li>
+                <li><a href="trouble.html">TROUBLE SHOOTING</a></li>
+            </ul>
+            <ul class="icon">
+                <li><a href="">SIGN IN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+            </ul>
+            <a href="#" class="nav_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="main">
+            <table class="board">
+                <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>삭제</th>
+                </tr>
+                </thead>
+                <tbody class="content">
 
-            </div>
-        </article>
-    </section>
+                </tbody>
+            </table>
+            <article class="btn">
+                <a class="register_btn" href="write.html">등록하기</a>
+                <div class="func">
+                    <div class="title_search">
+                        제목: <input type="text" id="num" style="height: 30px; font-size: 20px">
+                    </div>
+                    <div class="three_btn">
+                        <a id="search" onclick="show()">show</a>
+                        <a href="write.html">update</a>
+                        <a id="delete" onclick="remove()">delete</a>
+                    </div>
+                </div>
+            </article>
+            <article class="main_script">
+                <div id="test">
 
-</main>
-<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
-<script src="write.js"></script>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCdm4yhjEv2bGVp4d8d8SqtyWTpf7gwds0",
+            authDomain: "my-info-web.firebaseapp.com",
+            databaseURL: "https://my-info-web.firebaseio.com",
+            projectId: "my-info-web",
+            storageBucket: "my-info-web.appspot.com",
+            messagingSenderId: "451708761343",
+            appId: "1:451708761343:web:91d8d889069d3fee3cc8ca"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="write.js"></script>
 </body>
 </html>
