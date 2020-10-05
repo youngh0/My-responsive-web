@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #CDC7B6;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #98958C;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.nav ul{
+    padding: 0;
+    margin-bottom: 0;
+}
+.nav ul li{
+    /*font-family: 'Baloo Tammudu 2', cursive;*/
+}
+a{
+    text-decoration: none;
+    color: #FAFDF7;
+}
+.logo,.menu{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.logo a{
+    font-size: 24px;
+    padding-left: 8px;
+}
+.menu,.icon{
+    list-style: none;
+}
+.menu li{
+    padding: 8px 12px;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+.menu li a{
+    /*font-family: 'Gugi', cursive;*/
+}
+.menu li:hover{
+    background: #d49466;
+    border-radius: 5px;
+}
+.icon li{
+    padding: 8px 12px;
+    font-size: 25px;
+}
+.icon{
+    display: flex;
+}
+.nav_btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 20px;
+    display: none;
+}
+.main
+{
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    border-radius: 8px;
+}
+.main h1{
+    color: #1c8adb;
+    margin-bottom: 30px;
+}
+
+.inputBox{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+    border: 1px solid #999;
+    outline: none;
+    font-size: 12px;
+}
+hr{
+
+}
+button{
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 50px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1c8adb;
+}
+#go_signIn{
+    color: #1c8adb;
+}
+@media (max-width: 768px) {
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li{
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .nav .icon{
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+    .nav_btn{
+        display: block;
+    }
+    .menu.active,.icon.active{
+        display: flex;
+    }
+}
