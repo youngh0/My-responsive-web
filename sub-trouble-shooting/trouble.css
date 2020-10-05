@@ -123,6 +123,10 @@ button:focus{
     color: #FAFDF7;
     background: #CAB47D;
     font-size: 20px;
+    transition: 0.4s;
+}
+.btn .register_btn:hover{
+    font-size: 23px;
 }
 /*click,edit,delete버튼*/
 .btn .func{
@@ -138,16 +142,28 @@ button:focus{
     right: 0;
     box-sizing: border-box;
 }
-.btn .func .title_search, .btn .func button{
+.btn .func .title_search{
     margin-top: 20px;
 }
-
+.btn .func .three_btn{
+    margin-top: 22px;
+}
 .btn .func button, .btn .func a {
     border-radius: 5px;
     color: #FAFDF7;
     background: #CAB47D;
     padding: 5px 5px;
     font-size: 18px;
+}
+.btn .func a{
+    margin-right: 10px;
+    transition: 0.4s;
+}
+.btn .func a:hover{
+    font-size: 20px;
+}
+#delete{
+    margin-right: 0;
 }
 input{
     box-sizing: border-box;

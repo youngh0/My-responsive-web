@@ -6,37 +6,37 @@
     <link rel="stylesheet" href="write.css">
 </head>
 <body>
-    <header>
-        <h1>trouble shooting 작성</h1>
-    </header>
-    <main class="container">
-        <section class="write">
-            <table>
-                <tr class="title">
-                    <th><label>제목: </label> </th>
-                    <td colspan="3"><input id="title" type="text" placeholder="제목을 입력해주세요" size="40">
+<header>
+    <h1>trouble shooting 작성</h1>
+</header>
+<main class="container">
+    <section class="write">
+        <table>
+            <tr class="title">
+                <th><label>제목: </label> </th>
+                <td colspan="3"><input id="title" type="text" placeholder="제목을 입력해주세요" size="40">
                     <button id="call" onclick="calling()">불러오기</button></td>
-                </tr>
-                <tr class="name">
-                    <th><label>이름: </label></th>
-                    <td colspan="3"><input id="name" type="text" placeholder="이름을 입력해주세요" size="40"></td>
-                </tr>
-                <tr>
-                    <th><label>내용: </label></th>
-                    <td colspan="3"><textarea name="" id="main_txt" cols="50" rows="15"></textarea></td>
-                </tr>
-                <tr id="button_menu">
-                    <td>
-                        <a href="trouble.html">목록으로</a>
-                        <a id="update_btn" href="#" onclick="update()">업데이트</a>
-                        <a id="r_btn" href="#" onclick="regist()">등록</a>
-                    </td>
-                </tr>
-            </table>
-        </section>
-    </main>
-    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
-    <script src="firebase_board.js"></script>
+            </tr>
+            <tr class="name">
+                <th><label>이름: </label></th>
+                <td colspan="3"><input id="name" type="text" placeholder="이름을 입력해주세요" size="40"></td>
+            </tr>
+            <tr>
+                <th><label>내용: </label></th>
+                <td colspan="3"><textarea name="" id="main_txt" cols="50" rows="15"></textarea></td>
+            </tr>
+            <tr id="button_menu">
+                <td>
+                    <a href="trouble.html">목록으로</a>
+                    <a id="update_btn" href="#" onclick="update()">업데이트</a>
+                    <a id="r_btn" href="#" onclick="regist()">등록</a>
+                </td>
+            </tr>
+        </table>
+    </section>
+</main>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
+<script src="firebase_board.js"></script>
 </body>
 </html>
