@@ -13,6 +13,7 @@ function login(){
 }
 // 데티어 불러와서 보여주기
 function show(wpahr){
+    console.log("para");
     firebase.database().ref('board').once('value', function (snapshot) {
         let test_box = document.querySelector("#show_box");
         const postData = Object.entries(snapshot.val());
@@ -30,6 +31,27 @@ function show(wpahr){
 
     });
 }
+// show버튼으로 보여주기
+function show_b(){
+    console.log("none")
+    firebase.database().ref('board').once('value', function (snapshot) {
+        let test_box = document.querySelector("#show_box");
+        const postData = Object.entries(snapshot.val());
+        for(let i = 0; i < postData.length;i++)
+        {
+            const[key,body] = postData[i];
+            if(document.getElementById('num').value === body.title){
+                test_box.innerHTML = "<h1>" + body.title + "</h1><div id='bo'>" + body.main_txt +"</div>";
+                console.log("ok")
+                return;
+            }
+
+        }
+        alert("x");
+
+    });
+}
+
 
 function remove(){
     firebase.database().ref('board').once('value', function (snapshot) {
