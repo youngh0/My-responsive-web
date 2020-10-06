@@ -146,10 +146,13 @@ function calling(){
 }
 
 function update(){
+    let day = new Date();
+    let today = day.getFullYear() + "/" + (day.getMonth()+1) + "/" + day.getDate();
     firebase.database().ref('board/' + document.getElementById('title').value).update({
         title:document.getElementById('title').value,
         username:document.getElementById('name').value,
-        main_txt:document.getElementById('main_txt').value
+        main_txt:document.getElementById('main_txt').value,
+        today
     });
     alert("update");
     location.href = "trouble.html";
