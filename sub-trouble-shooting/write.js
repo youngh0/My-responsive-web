@@ -73,6 +73,27 @@ function remove(){
 
 }
 
+function remove_b(wpahr){
+    firebase.database().ref('board').once('value', function (snapshot) {
+        let test_box = document.querySelector("#test");
+        const postData = Object.entries(snapshot.val());
+        for(let i = 0; i < postData.length;i++)
+        {
+            const[key,body] = postData[i];
+            if(wpahr === body.title){
+                firebase.database().ref('board/'+wpahr).remove();
+                console.log("ok")
+                alert("삭제 완료");
+                return;
+            }
+        }
+        alert("x");
+
+    });
+
+}
+
+
 function regist(){
     let day = new Date();
     let today = day.getFullYear() + "/" + (day.getMonth()+1) + "/" + day.getDate();
@@ -146,6 +167,6 @@ firebase.database().ref('board').on('value', function (snapshot) {
         const[key,body] = postData[i];
         console.log(body.title);
         tableContent.innerHTML += "<tr><td>" + body.today + "</td> <td><a onclick='show(id)'id='"+ body.title  + "'> " +
-            body.title+"</a class='tit'></td> <td>" + body.username +"</td><td>"+ "<a id='"+body.title +"'>x</a></tr>"
+            body.title+"</a class='tit'></td> <td>" + body.username +"</td><td>"+ "<a onclick='remove_b(id)' id='"+body.title +"'>x</a></tr>"
     }
 });
