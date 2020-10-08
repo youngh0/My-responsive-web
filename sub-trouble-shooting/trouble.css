@@ -40,7 +40,7 @@ a{
     font-size: 24px;
     padding-left: 8px;
 }
-.menu,.icon{
+.menu{
     list-style: none;
 }
 .menu li{
@@ -49,16 +49,19 @@ a{
     transition: 0.8s;
 
 }
+.icon li{
+    transition: 0.8s;
+    padding: 0px
+}
 .menu li a{
     font-family: 'Gugi', cursive;
 }
-.menu li:hover{
+.menu li:hover, .icon li:hover{
     background: #d49466;
     border-radius: 5px;
 }
 .icon li{
-    padding: 8px 12px;
-    font-size: 25px;
+    font-size: 20px;
 }
 .icon{
     display: flex;
