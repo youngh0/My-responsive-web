@@ -23,8 +23,8 @@
             <li><a href="trouble.html">TROUBLE SHOOTING</a></li>
         </ul>
         <ul class="icon">
-            <li><a href="">SIGN IN</a></li>
-            <li><a href="#" onclick="show_sign_up()">SIGN UP</a></li>
+            <li><a href="#" onclick="show_sign_in()">SIGN UP</a></li>
+            <li><a href="#" onclick="show_sign_up()">SIGN IN</a></li>
         </ul>
         <a href="#" class="nav_btn">
             <i class="fas fa-bars"></i>
@@ -33,7 +33,22 @@
 </header>
 <main class="container">
     <section class="main_sign_up" style="display: none">
+        <div class="sign_in_box">
+            <a href="#" class="cancle" style="color: black" onclick="hidebox()">x</a>
+            <h1>SIGN IN</h1>
+            <div class="input_sign_in">
+                <input type="email" id="id_in" class="inputBox" placeholder="INPUT EMAIL">
+                <input type="password" id="pw_in" class="inputBox" placeholder="INPUT PASSWORD">
+            </div>
+            <br>
+            <hr>
+            <button onclick="login()"> SIGN IN</button>
+            <p>You don't have account?<a class="go_signIn"> Sign up</a></p>
+        </div>
+    </section>
+    <section class="main_sign_in" style="display: none">
         <div class="sign_up_box">
+            <a href="#" class="cancle" style="color: black" onclick="hidebox()">x</a>
             <h1>SIGN UP</h1>
             <div class="input_sign_up">
                 <input type="email" id="id" class="inputBox" placeholder="INPUT EMAIL">
@@ -42,7 +57,7 @@
             <br>
             <hr>
             <button onclick="signUp()"> signup</button>
-            <p>Do you have an account?<a id="go_signIn"> Sign in</a></p>
+            <p>Do you have an account?<a class="go_signIn"> Sign in</a></p>
         </div>
     </section>
     <section class="main">
