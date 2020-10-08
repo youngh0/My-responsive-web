@@ -1,16 +1,3 @@
-function signUp(){
-    let id = document.querySelector('#id').value;
-    let pw = document.querySelector('#pw').value;
-    console.log(id,pw);
-    firebase.auth().createUserWithEmailAndPassword(id,pw).then(cred =>{
-        console.log(cred);
-    });
-
-}
-
-function login(){
-
-}
 // 데티어 불러와서 보여주기
 function show(wpahr){
     console.log("para");
@@ -45,7 +32,6 @@ function show_b(){
                 console.log("ok")
                 return;
             }
-
         }
         alert("x");
 
@@ -158,18 +144,14 @@ function update(){
     location.href = "trouble.html";
 }
 
-
-
 firebase.database().ref('board').on('value', function (snapshot) {
     const postData = Object.entries(snapshot.val());
-    console.log(postData.length);
     let tableContent = document.querySelector(".content")
     tableContent.innerHTML = "";
     for(let i = 0; i < postData.length;i++)
     {
         const[key,body] = postData[i];
-        console.log(body.title);
         tableContent.innerHTML += "<tr><td>" + body.today + "</td> <td><a onclick='show(id)'id='"+ body.title  + "'> " +
-            body.title+"</a class='tit'></td> <td>" + body.username +"</td><td>"+ "<a onclick='remove_b(id)' id='"+body.title +"'>x</a></tr>"
+            body.title+"</a class='tit'></td> <td>" + body.username +"</td><td>"+ "<a onclick='check_remove(id)' id='"+body.title +"'>x</a></tr>"
     }
 });
