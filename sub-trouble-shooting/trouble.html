@@ -6,6 +6,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="trouble.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="signUp.css">
     <script src="../intro.js" defer></script>
 </head>
 <body>
@@ -23,7 +24,7 @@
         </ul>
         <ul class="icon">
             <li><a href="">SIGN IN</a></li>
-            <li><a href="signup.html">SIGN UP</a></li>
+            <li><a href="#" onclick="show_sign_up()">SIGN UP</a></li>
         </ul>
         <a href="#" class="nav_btn">
             <i class="fas fa-bars"></i>
@@ -31,6 +32,19 @@
     </nav>
 </header>
 <main class="container">
+    <section class="main_sign_up" style="display: none">
+        <div class="sign_up_box">
+            <h1>SIGN UP</h1>
+            <div class="input_sign_up">
+                <input type="email" id="id" class="inputBox" placeholder="INPUT EMAIL">
+                <input type="password" id="pw" class="inputBox" placeholder="INPUT PASSWORD">
+            </div>
+            <br>
+            <hr>
+            <button onclick="signUp()"> signup</button>
+            <p>Do you have an account?<a id="go_signIn"> Sign in</a></p>
+        </div>
+    </section>
     <section class="main">
         <table class="board">
             <thead>
@@ -87,5 +101,6 @@
     const db = firebase.firestore();
 </script>
 <script src="write.js"></script>
+<script src="login.js"></script>
 </body>
 </html>
