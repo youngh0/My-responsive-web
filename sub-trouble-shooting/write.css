@@ -10,6 +10,12 @@ h1{
     font-family: 'Sunflower', sans-serif;
     font-size: 40px;
 }
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
 table{
     margin: 0 auto;
     position: relative;
@@ -85,4 +91,80 @@ input:focus, textarea:focus{
 }
 #button_menu td #r_btn{
     margin-right: 0;
+}
+@media (max-width: 768px){
+    .write{
+        width: 760px;
+        margin-left: 150px;
+    }
+
+    .write table, .write tbody{
+        width: 760px;
+    }
+    .write table tr{
+        width: 760px;
+    }
+    label{
+        font-size: 20px;
+    }
+    .title input, .name input{
+        width: 250px;
+        font-size: 16px;
+        height: 30px;
+    }
+    textarea{
+        width: 450px;
+        height: 300px;
+    }
+
+    a,.title button{
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    .title button{
+        margin-left: 15px;
+    }
+    #button_menu td{
+        left: 50%;
+        margin-left: -200px;
+    }
+
+}
+@media (max-width: 375px) {
+    .container h1{
+        font-size: 30px;
+    }
+    .write{
+        width: 350px;
+    }
+    .write table, .write tbody{
+        width: 350px;
+    }
+    .write table tr{
+        width: 350px;
+    }
+    label{
+        font-size: 16px;
+    }
+    .title input, .name input{
+        width: 150px;
+        font-size: 14px;
+        height: 23px;
+    }
+    textarea{
+        width: 250px;
+        height: 200px;
+    }
+
+    a,.title button{
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    .title button{
+        margin-left: 15px;
+    }
+    #button_menu td{
+        left: 50%;
+        margin-left: -150px;
+    }
 }

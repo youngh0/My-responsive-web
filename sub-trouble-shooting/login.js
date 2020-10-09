@@ -1,9 +1,13 @@
 let sign_in_menu = document.querySelector('#sign_in_menu');
 let sign_up_menu = document.querySelector('#sign_up_menu');
 let logout_box = document.querySelector('#log_out_menu');
+let sign_up_box = document.querySelector('.main_sign_up');
+let sign_in_box = document.querySelector('.main_sign_in');
+let three_btn = document.querySelector('.func');
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
+        console.log(user)
         console.log('yes')
         sign_in_menu.style.display = "none";
         sign_up_menu.style.display = "none";
@@ -59,29 +63,25 @@ function check_update_btn(){
 }
 
 function hidebox(){
-    let box_up = document.querySelector('.main_sign_up');
-    let box_in = document.querySelector('.main_sign_in');
-    box_in.style.display = 'none';
-    box_up.style.display = 'none';
+    sign_up_box.style.display = 'none';
+    sign_in_box.style.display = 'none';
+    three_btn.style.display = "block";
 }
 
 function show_sign_up(){
-    let three_btn = document.querySelector('.func');
-    let show_sign_up = document.querySelector('.main_sign_up');
-    show_sign_up.style.display = 'block';
+    sign_up_box.style.display = 'block';
     three_btn.style.display = "none";
 }
 function signUp(){
-    let show_sign_up = document.querySelector('.main_sign_up');
-    let three_btn = document.querySelector('.func');
+
     let id = document.querySelector('#id').value;
     let pw = document.querySelector('#pw').value;
-
     firebase.auth().createUserWithEmailAndPassword(id,pw).then(cred =>{
-        alert("o");
-        location.href = "trouble.html"
-        three_btn.style.display = "block"
-        show_sign_up.style.display = 'none';
+        alert("sign up");
+        firebase.auth().signOut().then(function () {
+            three_btn.style.display = "block"
+            sign_up_box.style.display = 'none';
+        });
     }).catch(function (error){
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -90,9 +90,7 @@ function signUp(){
 }
 
 function show_sign_in(){
-    let three_btn = document.querySelector('.func');
-    let show_sign_up = document.querySelector('.main_sign_in');
-    show_sign_up.style.display = 'block';
+    sign_in_box.style.display = 'block';
     three_btn.style.display = "none";
 }
 function log(){
@@ -107,16 +105,14 @@ function log(){
 }
 
 function login(){
-    let show_sign_up = document.querySelector('.main_sign_in');
-    let three_btn = document.querySelector('.func');
     let id = document.querySelector('#id_in').value;
     let pw = document.querySelector('#pw_in').value;
 
     firebase.auth().signInWithEmailAndPassword(id, pw).then(function () {
-        console.log("success")
+        console.log("sign in")
         alert("o");
         three_btn.style.display = "block";
-        show_sign_up.style.display = 'none';
+        sign_in_box.style.display = 'none';
         location.href = "trouble.html";
     })
         .catch(function (error) {
@@ -131,3 +127,11 @@ function logout(){
     });
 }
 
+function clk_go_sign_up(){
+    sign_up_box.style.display = 'none';
+    sign_in_box.style.display = 'block';
+}
+function clk_go_sign_in(){
+    sign_up_box.style.display = 'block';
+    sign_in_box.style.display = 'none';
+}

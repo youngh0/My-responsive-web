@@ -20,13 +20,13 @@
         </div>
         <ul class="menu">
             <li><a href="../index.html">HOME</a></li>
-            <li><a href="sub-web-project/web-project.html">WEB PROJECT</a></li>
+            <li><a href="../sub-web-project/web-project.html">WEB PROJECT</a></li>
             <li><a href="#">APP PROJECT</a></li>
             <li><a href="trouble.html">TROUBLE SHOOTING</a></li>
         </ul>
         <ul class="icon" id="login_logout_box">
-            <li id="sign_in_menu"><a href="#" onclick="show_sign_in()">SIGN UP</a></li>
-            <li id="sign_up_menu"><a href="#" onclick="show_sign_up()">SIGN IN</a></li>
+            <li id="sign_in_menu"><a href="#" onclick="show_sign_up()">SIGN UP</a></li>
+            <li id="sign_up_menu"><a href="#" onclick="show_sign_in()">SIGN IN</a></li>
             <li id="log_out_menu"><a href="#" onclick="logout()">LOG OUT</a></li>
         </ul>
         <a href="#" class="nav_btn">
@@ -35,7 +35,7 @@
     </nav>
 </header>
 <main class="container">
-    <section class="main_sign_up" style="display: none">
+    <section class="main_sign_in" style="display: none">
         <div class="sign_in_box">
             <a href="#" class="cancle" style="color: black" onclick="hidebox()">x</a>
             <h1>SIGN IN</h1>
@@ -46,10 +46,10 @@
             <br>
             <hr>
             <button onclick="log()"> SIGN IN</button>
-            <p>You don't have account?<a class="go_signIn"> Sign up</a></p>
+            <p>You don't have account?<a href="#" class="go_signIn" onclick="clk_go_sign_up()"> Sign up</a></p>
         </div>
     </section>
-    <section class="main_sign_in" style="display: none">
+    <section class="main_sign_up" style="display: none">
         <div class="sign_up_box">
             <a href="#" class="cancle" style="color: black" onclick="hidebox()">x</a>
             <h1>SIGN UP</h1>
@@ -59,8 +59,8 @@
             </div>
             <br>
             <hr>
-            <button onclick="signUp()"> signup</button>
-            <p>Do you have an account?<a class="go_signIn"> Sign in</a></p>
+            <button onclick="signUp()"> SIGN UP</button>
+            <p>Do you have an account?<a href="#" class="go_signIn" onclick="clk_go_sign_in()"> Sign in</a></p>
         </div>
     </section>
     <section class="main">
@@ -81,7 +81,7 @@
             <a class="register_btn" href="#" onclick="check_regist_btn()">등록하기</a>
             <div class="func">
                 <div class="title_search">
-                    제목: <input type="text" id="num" style="height: 30px; font-size: 20px">
+                    제목: <input type="text" id="num">
                 </div>
                 <div class="three_btn">
                     <a id="search" onclick="show_b()">show</a>

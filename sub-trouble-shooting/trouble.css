@@ -73,7 +73,10 @@ a{
     font-size: 20px;
     display: none;
 }
-
+#num{
+    font-size: 20px;
+    height: 30px;
+}
 .main{
     width: 700px;
     margin: 0 auto;
@@ -197,6 +200,9 @@ input:focus{
     white-space: normal;
 }
 @media (max-width: 768px) {
+    body{
+        width: 768px;
+    }
     .nav{
         flex-direction: column;
         align-items: flex-start;
@@ -239,23 +245,76 @@ input:focus{
 }
 
 @media (max-width: 375px){
-    .container h1{
-        font-size: 30px;
+    body{
+        width: 375px;
     }
-    .container button{
+    .main{
+        width: 300px;
+    }
+    .main thead{
         font-size: 20px;
     }
-    .belong .belong_box{
-        flex-direction: column;
+    .main tbody{
+        font-size: 16px;
     }
-    .belong, .activity, .sns, .base{
-        align-items: center;
+    .main_script{
+        width: 300px;
     }
-    .base_detail h2, .act_detail h2,
-    .belong_detail h2, .sns_detail h2{
+    .btn{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .btn .register_btn{
+        padding: 8px 8px;
+        font-size: 16px;
+    }
+    .btn .register_btn:hover{
+        font-size: 20px;
+    }
+
+    .btn .func .title_search{
+        position: absolute;
+        font-size: 16px;
+        left: 0;
+        transform: none;
+    }
+    .btn .func a{
+        font-size: 14px;
+        margin-right: 2px;
+    }
+    .main_script #show_box h1{
         font-size: 25px;
-        margin: 0;
-        width: 100%;
-        text-align: center;
     }
+    .main_script #show_box #bo{
+        font-size: 20px;
+    }
+    .main_sign_up, .main_sign_in{
+        left: 50%;
+        margin-left: -50px;
+    }
+    #num{
+        font-size: 10px;
+    }
+    .btn .func a:hover{
+        font-size: 16px;
+    }
+    /*.container h1{*/
+    /*    font-size: 30px;*/
+    /*}*/
+    /*.container button{*/
+    /*    font-size: 20px;*/
+    /*}*/
+    /*.belong .belong_box{*/
+    /*    flex-direction: column;*/
+    /*}*/
+    /*.belong, .activity, .sns, .base{*/
+    /*    align-items: center;*/
+    /*}*/
+    /*.base_detail h2, .act_detail h2,*/
+    /*.belong_detail h2, .sns_detail h2{*/
+    /*    font-size: 25px;*/
+    /*    margin: 0;*/
+    /*    width: 100%;*/
+    /*    text-align: center;*/
+    /*}*/
 }

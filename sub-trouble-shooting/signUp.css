@@ -103,7 +103,9 @@ a{
     color: #1c8adb;
     margin-bottom: 30px;
 }
-
+.go_signIn{
+    color: #1c8adb;
+}
 .inputBox{
     border-radius: 20px;
     padding: 10px;
@@ -118,7 +120,7 @@ hr{
 }
 button{
     color: #fff;
-    width: 100%;
+    width: 270PX;
     padding: 10px;
     border-radius: 20px;
     font-size: 15px;
