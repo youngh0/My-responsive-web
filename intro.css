@@ -274,6 +274,10 @@ br{
 }
 
 @media (max-width: 375px){
+
+    .first{
+        margin-top: 70px;
+    }
     .container h1{
         font-size: 30px;
     }
@@ -335,5 +339,10 @@ br{
         margin-left: 50px;
         margin-top: 10px;
     }
-
+    .js-weather{
+        position: absolute;
+        top: -55px;
+        left: 50%;
+        margin-left: -60px;
+    }
 }

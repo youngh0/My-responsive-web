@@ -139,6 +139,34 @@ footer span {
 }
 
 @media (max-width: 768px) {
+    body{width: 768px}
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li{
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .nav .icon{
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+    .nav_btn{
+        display: block;
+    }
+    .menu.active,.icon.active{
+        display: flex;
+    }
+
     .head,.head .menu,.main{width: 100%}
     .main .rule{
         width: 100%;
@@ -160,6 +188,7 @@ footer span {
         font-size: 15px;
     }
 }
+
 
 @media (max-width: 375px) {
     .main .explain{
