@@ -128,10 +128,10 @@ function logout(){
 }
 
 function clk_go_sign_up(){
-    sign_up_box.style.display = 'none';
-    sign_in_box.style.display = 'block';
-}
-function clk_go_sign_in(){
     sign_up_box.style.display = 'block';
     sign_in_box.style.display = 'none';
+}
+function clk_go_sign_in(){
+    sign_up_box.style.display = 'none';
+    sign_in_box.style.display = 'block';
 }
