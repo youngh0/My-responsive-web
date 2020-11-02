@@ -80,7 +80,7 @@ function remove_b(wpahr){
 }
 
 
-function regist(){
+function register(){
     let day = new Date();
     let today = day.getFullYear() + "/" + (day.getMonth()+1) + "/" + day.getDate();
 
@@ -104,7 +104,7 @@ function regist(){
             title:document.getElementById('title').value,
             main_txt:document.getElementById('main_txt').value,
             today,
-        })
+        });
         alert("ok");
         location.href = "trouble.html";
     });
