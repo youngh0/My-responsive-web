@@ -1,2 +1,2 @@
-# 어몽어스
+# My info, board
 responsive web
