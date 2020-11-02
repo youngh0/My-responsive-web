@@ -3,6 +3,7 @@ body{
     padding: 0;
     background: #bbd8d1;
     width: 100%;
+    height: 100%;
 }
 header{
     width: 1024px;
@@ -122,6 +123,8 @@ header{
 }
 
 footer{
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 65px;
     background: #656060;
@@ -182,6 +185,7 @@ footer span {
         height: 280px;
     }
     footer{
+
         height: 50px;
     }
     footer span {
